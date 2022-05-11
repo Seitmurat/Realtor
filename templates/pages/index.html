@@ -13,8 +13,7 @@
           <h1 class="display-4 mb-4">
             Property Searching Just Got So Easy
           </h1>
-          <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quas, asperiores eveniet vel nostrum magnam
-            voluptatum tempore! Consectetur, id commodi!</p>
+          <p class="lead">Enter any criteria by which you want to find your home.</p>
           <div class="search">
             <form action="{% url 'search' %}">
               <div class="form-row">
@@ -68,19 +67,19 @@
                 <img class="card-img-top" src="{{ listing.photo_main.url }}" alt="">
                 <div class="card-img-overlay">
                   <h2>
-                    <span class="badge badge-secondary text-white">${{ listing.price | intcomma }}</span>
+                    <span class="badge badge-secondary text-white">{{ listing.price | intcomma }}₸</span>
                   </h2>
                 </div>
                 <div class="card-body">
                   <div class="listing-heading text-center">
-                    <h4 class="text-primary">{{ listing.title }}</h4>
+                    <a href="{% url 'listing' listing.id %}"><h4 class="text-primary">{{ listing.title }}</h4></a>
                     <p>
                       <i class="fas fa-map-marker text-secondary"></i> {{ listing.city }} {{ listing.state }}, {{ listing.zipcode }}</p>
                   </div>
                   <hr>
                   <div class="row py-2 text-secondary">
                     <div class="col-6">
-                      <i class="fas fa-th-large"></i> Sqm: {{ listing.sqft }}</div>
+                      <i class="fas fa-th-large"></i> Sqm: {{ listing.sqm }}</div>
                     <div class="col-6">
                       <i class="fas fa-car"></i> Garage: {{ listing.garage }}</div>
                   </div>
@@ -122,22 +121,21 @@
           <i class="fas fa-comment fa-4x mr-4"></i>
           <hr>
           <h3>Consulting Services</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
-            hic dignissimos ratione ea quae.</p>
+          <p>You can call any of our realtors and they will be happy to advise you.</p>
         </div>
         <div class="col-md-4">
           <i class="fas fa-home fa-4x mr-4"></i>
           <hr>
-          <h3>Propery Management</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
-            hic dignissimos ratione ea quae.</p>
+          <h3>Property Management</h3>
+          <p>Property management is the daily oversight of residential, commercial, or industrial real estate by a third-party contractor. Generally, property managers take responsibility for day-to-day repairs and ongoing maintenance, security, and upkeep of properties. They usually work for the owners of investment properties such as apartment and condominium complexes, private home communities, shopping centers, and industrial parks.
+						About property management you can read <a href="https://www.investopedia.com/terms/p/property-management.asp">here</a>
+					</p>
         </div>
         <div class="col-md-4">
           <i class="fas fa-suitcase fa-4x mr-4"></i>
           <hr>
-          <h3>Renting & Selling</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
-            hic dignissimos ratione ea quae.</p>
+          <h3>Realtor company services</h3>
+          <p>Realtor Company is pleased to offer its customers high-quality developer services in Turkey. With us you will receive full professional support of the transaction and competent assistance at every stage from the selection of the ideal object to the purchase of furniture in your new apartment.</p>
         </div>
       </div>
     </div>

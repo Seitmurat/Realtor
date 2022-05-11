@@ -14,34 +14,6 @@
 </head>
 
 <body>
-<section id="top-bar" class="p-3">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <i class="fas fa-phone"></i> +77474519384
-      </div>
-      <div class="col-md-4">
-        <i class="fas fa-envelope-open"></i> ens@sdu.edu.kz
-      </div>
-      <div class="col-md-4">
-        <div class="social text-right">
-          <a href="https://twitter.com/realtordotcom">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="https://www.facebook.com/realtor.com/">
-            <i class="fab fa-facebook"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/seitmurat-seitkul/">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="https://www.instagram.com/realtordotcom/">
-            <i class="fab fa-instagram"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
 	<div class="container">
 		<a class="navbar-brand" href="{% url 'index' %}">
@@ -128,10 +100,39 @@
 
   {% block content %} {% endblock %}
  
-<footer id="main-footer" class="py-4 bg-primary text-white text-center">
+<footer id="main-footer" class="py-4 bg-secondary text-white text-center" style="flex: 0 0 auto;">
   Copyright &copy;
-  <span class="year"></span> Real Estate
+  <span class="year"></span> Realtor Company
+	<div class="container">
+    <div class="row">
+			<div class="col-md-4">
+        <i class="fas fa-envelope-open"></i> ens@sdu.edu.kz
+      </div>
+      <div class="col-md-4">
+        <i class="fas fa-phone"></i> +77474519384
+      </div>
+      <div class="col-md-4">
+        <div class="social text-right">
+          <a href="https://twitter.com/realtordotcom">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.facebook.com/realtor.com/">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/seitmurat-seitkul/">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://www.instagram.com/realtordotcom/">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
+<script src="{% static 'js/jquery-3.3.1.min.js' %} "></script>
+<script src="{% static 'js/bootstrap.bundle.min.js' %} "></script>
+<script src="{% static 'js/lightbox.min.js' %} "></script>
+<script src="{% static 'js/main.js' %} "></script>
 </body>
-
 </html>

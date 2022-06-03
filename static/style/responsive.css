@@ -1,13 +1,8 @@
-/* Tablets */
-
 input[type="submit"], button {
     -webkit-appearance: none;
     appearance: none;
 }
-
 @media (max-width: 1024px) {
-    /* Basic */
-
     html {
         -webkit-text-size-adjust: 100%;
     }
@@ -20,9 +15,6 @@ input[type="submit"], button {
     .small {
         font-size: 12px;
     }
-
-    /* Layout */
-
     #container {
         min-width: 0;
     }
@@ -34,9 +26,6 @@ input[type="submit"], button {
     div.breadcrumbs {
         padding: 10px 30px;
     }
-
-    /* Header */
-
     #header {
         display: flex;
         flex-direction: column;

@@ -1,7 +1,3 @@
-/*
-    DJANGO Admin styles
-*/
-
 @import url(fonts.css);
 
 body {
@@ -12,18 +8,13 @@ body {
     color: #333;
     background: #fff;
 }
-
-/* LINKS */
-
 a:link, a:visited {
     color: #447e9b;
     text-decoration: none;
 }
-
 a:focus, a:hover {
     color: #036;
 }
-
 a:focus {
     text-decoration: underline;
 }
@@ -40,9 +31,6 @@ a.section:link, a.section:visited {
 a.section:focus, a.section:hover {
     text-decoration: underline;
 }
-
-/* GLOBAL DEFAULTS */
-
 p, ol, ul, dl {
     margin: .2em 0 .8em 0;
 }

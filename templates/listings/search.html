@@ -5,7 +5,7 @@
 {% block title %} Search Results {% endblock %}
 
 {% block content %}
-<section id="showcase-inner" class="showcase-search text-white py-5">
+<section id="showcase-inner" class="showcase-search text-white py-5" style="background-color: blue;">
     <div class="container">
       <div class="row text-center">
         <div class="col-md-12">
@@ -15,7 +15,6 @@
                 <label class="sr-only">Keywords</label>
                 <input type="text" name="keywords" class="form-control" placeholder="Keyword (Pool, Garage, etc)" value="{{ values.keywords }}">
               </div>
-
               <div class="col-md-6 mb-3">
                 <label class="sr-only">City</label>
                 <input type="text" name="city" class="form-control" placeholder="City" value="{{ values.city }}">
@@ -48,7 +47,7 @@
                 </select>
               </div>
             </div>
-            <button class="btn btn-secondary btn-block mt-4" type="submit">Submit form</button>
+            <button class="btn btn-block mt-4" type="submit" style="background-color: #3F72AF; color: white;">Submit form</button>
           </form>
         </div>
       </div>
@@ -77,47 +76,47 @@
       <div class="row">
         {% if listings %}
           {% for listing in listings %}
-          <div class="col-md-6 col-lg-4 mb-4">
+          <a href="{% url 'listing' listing.id %}"><div class="col-md-6 col-lg-4 mb-4">
               <div class="card listing-preview">
                 <img class="card-img-top" src="{{ listing.photo_main.url }}" alt="">
                 <div class="card-img-overlay">
                   <h2>
-                    <span class="badge badge-secondary text-white">${{ listing.price | intcomma }}</span>
+                    <span class="badge text-white" style="background-color: #3F72AF;">{{ listing.price | intcomma }}₸</span>
                   </h2>
                 </div>
                 <div class="card-body">
                   <div class="listing-heading text-center">
-                    <h4 class="text-primary">{{ listing.title }}</h4>
+                    <a href="{% url 'listing' listing.id %}"><h4 class="text-primary">{{ listing.title }}</h4></a>
                     <p>
-                      <i class="fas fa-map-marker text-secondary"></i> {{ listing.city }} {{ listing.state }}, {{ listing.zipcode }}</p>
+                      <i class="fas fa-map-marker "></i>&nbsp; {{ listing.city }} {{ listing.state }}</p>
                   </div>
                   <hr>
-                  <div class="row py-2 text-secondary">
+                  <div class="row py-2 ">
                     <div class="col-6">
-                      <i class="fas fa-th-large"></i> Sqm: {{ listing.sqft }}</div>
+                      <i class="fas fa-th-large"></i>&nbsp; Sqm: {{ listing.sqm }}</div>
                     <div class="col-6">
-                      <i class="fas fa-car"></i> Garage: {{ listing.garage }}</div>
+                      <i class="fas fa-car"></i>&nbsp; Garage: {{ listing.garage }}</div>
                   </div>
-                  <div class="row py-2 text-secondary">
+                  <div class="row py-2 ">
                     <div class="col-6">
-                      <i class="fas fa-bed"></i> Bedrooms: {{ listing.bedrooms }}</div>
+                      <i class="fas fa-bed"></i>&nbsp; Bedrooms: {{ listing.bedrooms }}</div>
                     <div class="col-6">
-                      <i class="fas fa-bath"></i> Bathrooms: {{ listing.bathrooms }}</div>
+                      <i class="fas fa-bath"></i>&nbsp; Bathrooms: {{ listing.bathrooms }}</div>
                   </div>
                   <hr>
-                  <div class="row py-2 text-secondary">
+                  <div class="row py-2 ">
                     <div class="col-12">
-                      <i class="fas fa-user"></i> {{ listing.realtor }}</div>
+                      <i class="fas fa-user"></i>&nbsp; {{ listing.realtor }}</div>
                   </div>
-                  <div class="row text-secondary pb-2">
+                  <div class="row  pb-2">
                     <div class="col-6">
-                      <i class="fas fa-clock"></i> {{ listing.list_date | timesince }}</div>
+                      <i class="fas fa-clock"></i>&nbsp; {{ listing.list_date | timesince }}</div>
                   </div>
                   <hr>
-                  <a href="{% url 'listing' listing.id %}" class="btn btn-primary btn-block">More Info</a>
+                  <a href="{% url 'listing' listing.id %}" class="btn text-white btn-block" style="background-color: #3F72AF;">More Info</a>
                 </div>
               </div>
-            </div>
+            </div></a>
           {% endfor %}
         {% else %}
           <div class="col-md-12">

@@ -13,7 +13,6 @@ def register(request):
     password2 = request.POST['password2']
 
     if password == password2:
-      # Check username
       if User.objects.filter(username=username).exists():
         messages.error(request, 'That username is taken')
         return redirect('register')

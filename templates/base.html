@@ -11,14 +11,16 @@
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
   <title>{% block title %}{% endblock %}</title>
+	<style>
+		i{
+			color: #3F72AF;
+		}
+	</style>
 </head>
 
-<body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+<body style="background-color: #DBE2EF">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" style="background-color: ">
 	<div class="container">
-		<a class="navbar-brand" href="{% url 'index' %}">
-			<img src="{% static 'img/logo.png' %}" class="logo" alt="">
-		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -100,32 +102,20 @@
 
   {% block content %} {% endblock %}
  
-<footer id="main-footer" class="py-4 bg-secondary text-white text-center" style="flex: 0 0 auto;">
+<footer id="main-footer" class="py-4 text-white text-center" style="background-color: #112D4E;">
   Copyright &copy;
   <span class="year"></span> Realtor Company
 	<div class="container">
     <div class="row">
 			<div class="col-md-4">
-        <i class="fas fa-envelope-open"></i> ens@sdu.edu.kz
+        <i class="fas fa-envelope-open"></i> &nbsp;ens@sdu.edu.kz
       </div>
       <div class="col-md-4">
-        <i class="fas fa-phone"></i> +77474519384
+        <i class="fas fa-phone"></i> &nbsp;+77474519384
       </div>
-      <div class="col-md-4">
-        <div class="social text-right">
-          <a href="https://twitter.com/realtordotcom">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="https://www.facebook.com/realtor.com/">
-            <i class="fab fa-facebook"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/seitmurat-seitkul/">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="https://www.instagram.com/realtordotcom/">
-            <i class="fab fa-instagram"></i>
-          </a>
-        </div>
+			<div class="col-md-4">
+        <i class="fas fa-address-card"></i> &nbsp;Kazakhstan, Almaty, Karasay Kaskelen city
+      </div>
       </div>
     </div>
   </div>
